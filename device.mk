@@ -39,5 +39,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.lge
+
 # Inherit from vendor makefiles.
 $(call inherit-product, vendor/lge/caymanlm/caymanlm-vendor.mk)
