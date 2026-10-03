@@ -19,14 +19,19 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
 
 # Fingerprint
+$(call soong_config_set,lge_udfps,sensor_x,540)
+$(call soong_config_set,lge_udfps,sensor_y,2187)
+$(call soong_config_set,lge_udfps,sensor_radius,91)
+$(call soong_config_set_bool,lge_udfps,managed_sequence,true)
+
+$(call inherit-product, hardware/lge/aidl/biometrics/fingerprint/udfps.mk)
+
+# Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.lge \
     sensors.lge
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
-
-$(call soong_config_set,LGE_FINGERPRINT_HAL,TARGET_HAS_EGISTEC_UDFPS,true)
 
 # Overlays
 PRODUCT_PACKAGES += \
