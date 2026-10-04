@@ -4,6 +4,11 @@ ro.vendor.lge.aux.camera=2
 ro.vendor.lge.physical.camera=5
 vendor.camera.provider.blacklist_ids=4,5,6,7,8,9
 
+# Fingerprint
+persist.vendor.fingerprint.type=udfps_optical
+persist.vendor.fingerprint.sensor_location=540|2187|91
+persist.vendor.fingerprint.has_touch_reset_ctrl=true
+
 # Miscellaneous
 ro.vendor.lge.build.target_operator=LAO
 ro.vendor.lge.build.target_country=COM
