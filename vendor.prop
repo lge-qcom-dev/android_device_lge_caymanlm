@@ -8,6 +8,8 @@ vendor.camera.provider.blacklist_ids=4,5,6,7,8,9
 persist.vendor.fingerprint.type=udfps_optical
 persist.vendor.fingerprint.sensor_location=540|2187|91
 persist.vendor.fingerprint.has_touch_reset_ctrl=true
+ro.vendor.fingerprint.dimming_reference=1705
+persist.vendor.fingerprint.managed_sequence=true
 
 # Miscellaneous
 ro.vendor.lge.build.target_operator=LAO
